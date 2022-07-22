@@ -6,25 +6,37 @@ public class Main {
         one[0] = 1;
         one[1] = 2;
         one[2] = 3;
-        System.out.print(one[0]);
-        for (int i = 1; i < one.length; i++) {
-            System.out.print(", " + one[i]);
+        for (int i = 0; i < one.length; i++) {
+            System.out.print(one[i]);
+            if (i == one.length - 1) {
+                break;
+            } else {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
 
         double[] two = {1.57, 7.654, 9.986};
-        System.out.print(two[0]);
-        for (int o = 1; o < two.length; o++) {
-            System.out.print(", " + two[o]);
+        for (int o = 0; o < two.length; o++) {
+            System.out.print(two[o]);
+            if (o == two.length - 1) {
+                break;
+            } else {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
 
         double[] tree = {1.444, 4.494, 7.327, 5.472};
-        System.out.print(tree[0]);
-        for (int t = 1; t < tree.length; t++) {
-            System.out.print(", " + tree[t]);
+        for (int t = 0; t < tree.length; t++) {
+            System.out.print(tree[t]);
+            if (t == tree.length - 1) {
+                break;
+            } else {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
@@ -63,18 +75,19 @@ public class Main {
         for (int i = 0; i < one.length; i++) {
             if (i != one.length - 1) {
                 if (one[i] % 2 != 0) {
-                    System.out.print((one[i] + 1) + ", ");
+                    one[i]++;
+                    System.out.print((one[i]) + ", ");
                 } else {
                     System.out.print(one[i] + ", ");
                 }
             } else {
                 if (one[i] % 2 != 0) {
-                    System.out.print((one[i] + 1));
+                    one[i]++;
+                    System.out.print((one[i]));
                 } else {
                     System.out.print(one[i]);
                 }
             }
         }
-
     }
 }
